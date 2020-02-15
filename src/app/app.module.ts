@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 // https://angular.io/guide/architecture-modules
 @NgModule({
@@ -16,7 +17,8 @@ import { HeroesComponent } from './heroes/heroes.component';
   declarations: [
     AppComponent,
     // HeroListComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   // exports: The subset of declarations that should be visible and usable in the component templates of other NgModules.
   exports: [],
