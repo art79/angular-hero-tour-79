@@ -16,7 +16,7 @@ import { HeroesComponent } from './heroes/heroes.component';
   declarations: [
     AppComponent,
     // HeroListComponent,
-    // HeroesComponent
+    HeroesComponent
   ],
   // exports: The subset of declarations that should be visible and usable in the component templates of other NgModules.
   exports: [],
