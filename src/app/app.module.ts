@@ -11,6 +11,8 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './hero.service';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 // https://angular.io/guide/architecture-modules
 @NgModule({
@@ -18,7 +20,8 @@ import { HeroService } from './hero.service';
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
   // exports: The subset of declarations that should be visible and usable in the component templates of other NgModules.
   exports: [],
@@ -28,7 +31,7 @@ import { HeroService } from './hero.service';
     FormsModule
   ],
   // providers: Creators of services that this NgModule contributes to the global collection of services; they become accessible in all parts of the app. (You can also specify providers at the component level, which is often preferred.)
-  providers: [HeroService],
+  providers: [HeroService, MessageService],
   // bootstrap: The main application view, called the root component, which hosts all other app views. Only the root NgModule should set the bootstrap property.
   bootstrap: [AppComponent]
 })
