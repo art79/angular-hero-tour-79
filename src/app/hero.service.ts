@@ -8,6 +8,11 @@ import { Injectable } from '@angular/core';
 import { Hero } from './Hero';
 import { HEROES } from './mock-heroes';
 
+// Observable is one of the key classes in the RxJS library.
+
+// In a later tutorial on HTTP, you'll learn that Angular's HttpClient methods return RxJS Observables. In this tutorial, you'll simulate getting data from the server with the RxJS of() function.
+import { Observable, of } from 'rxjs';
+
 // Notice that the new service imports the Angular Injectable symbol and annotates the class with the @Injectable() decorator. This marks the class as one that participates in the dependency injection system. The HeroService class is going to provide an injectable service, and it can also have its own injected dependencies. It doesn't have any dependencies yet, but it will soon.
 
 // You must make the HeroService available to the dependency injection system before Angular can inject it into the HeroesComponent by registering a provider. A provider is something that can create or deliver a service; in this case, it instantiates the HeroService class to provide the service.
@@ -26,8 +31,8 @@ export class HeroService {
 
   constructor() { }
 
-  getHeroes(): Hero[]{
-    return HEROES;
+  getHeroes(): Observable<Hero[]> {
+    return of(HEROES);
   }
 
 }
