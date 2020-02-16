@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
   // Inject in HeroService, which uses the service to send a message.
   // Inject in MessagesComponent, which displays that message, and also displays the ID when the user clicks a hero.
 
-import { Hero } from '../Hero';
-import { HEROES } from '../mock-heroes';
+import { Hero } from './Hero';
+import { HEROES } from './mock-heroes';
 
 // Notice that the new service imports the Angular Injectable symbol and annotates the class with the @Injectable() decorator. This marks the class as one that participates in the dependency injection system. The HeroService class is going to provide an injectable service, and it can also have its own injected dependencies. It doesn't have any dependencies yet, but it will soon.
 
