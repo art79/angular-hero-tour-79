@@ -1,4 +1,13 @@
 <h1>{{title}}</h1>
-<!-- See selector heroes.components.ts -->
 <app-messages></app-messages>
-<app-heroes></app-heroes>
+<!-- See selector heroes.components.ts -->
+<!-- <app-heroes></app-heroes> -->
+<!-- 
+  Open the AppComponent template and replace the <app-heroes> element with a <router-outlet> element.
+  he AppComponent template no longer needs <app-heroes> because the app will only display the HeroesComponent when the user navigates to it.
+
+The <router-outlet> tells the router where to display routed views.
+
+The RouterOutlet is one of the router directives that became available to the AppComponent because AppModule imports AppRoutingModule which exported RouterModule. The ng generate command you ran at the start of this tutorial added this import because of the --module=app flag. If you manually created app-routing.module.ts or used a tool other than the CLI to do so, you'll need to import AppRoutingModule into app.module.ts and add it to the imports array of the NgModule.
+ -->
+ <router-outlet></router-outlet>
