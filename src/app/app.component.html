@@ -1,7 +1,19 @@
 <h1>{{title}}</h1>
+<!-- 
+A routerLink attribute is set to "/heroes", the string that the router matches to the route to HeroesComponent. The routerLink is the selector for the RouterLink directive that turns user clicks into router navigations. It's another of the public directives in the RouterModule.
+
+The browser refreshes and displays the app title and heroes link, but not the heroes list.
+
+Click the link. The address bar updates to /heroes and the list of heroes appears.
+ -->
+<nav>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
 <app-messages></app-messages>
+
 <!-- See selector heroes.components.ts -->
 <!-- <app-heroes></app-heroes> -->
+<!-- Removed previous line and exchanged with a router-outlet -->
 <!-- 
   Open the AppComponent template and replace the <app-heroes> element with a <router-outlet> element.
   he AppComponent template no longer needs <app-heroes> because the app will only display the HeroesComponent when the user navigates to it.
