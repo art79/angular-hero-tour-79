@@ -7,14 +7,14 @@ import { FormsModule } from '@angular/forms';  // Added to get input to work
 import { AppComponent } from './app.component';
 
 
-import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
-import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { AppRoutingModule } from './app-routing.module';
 
 // https://angular.io/guide/architecture-modules
 @NgModule({
@@ -31,10 +31,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   // imports: Other modules whose exported classes are needed by component templates declared in this NgModule.
   imports: [
     BrowserModule, // application module needs material from within BrowserModule. To access that material, add it to the @NgModule metadata imports
-    FormsModule, AppRoutingModule
+    FormsModule, 
+    AppRoutingModule
   ],
   // providers: Creators of services that this NgModule contributes to the global collection of services; they become accessible in all parts of the app. (You can also specify providers at the component level, which is often preferred.)
-  providers: [HeroService, MessageService],
+  providers: [
+    HeroService, 
+    MessageService
+  ],
   // bootstrap: The main application view, called the root component, which hosts all other app views. Only the root NgModule should set the bootstrap property.
   bootstrap: [AppComponent]
 })
