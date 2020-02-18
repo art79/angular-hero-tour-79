@@ -8,12 +8,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
-
+import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {path: 'heroes', component: HeroesComponent}, //Since AppRoutingModule already imports HeroesComponent, you can use it in the routes array:
   { path: 'dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'detail/:id', component: HeroDetailComponent },
 ]
 /*
 A typical Angular Route has two properties:
