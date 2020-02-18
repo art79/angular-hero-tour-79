@@ -14,6 +14,7 @@ import { HeroService } from './hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 // https://angular.io/guide/architecture-modules
 @NgModule({
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   // exports: The subset of declarations that should be visible and usable in the component templates of other NgModules.
   exports: [],
